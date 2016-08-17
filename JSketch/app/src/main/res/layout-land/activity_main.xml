@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/Lighter"
+
+    android:orientation="horizontal"
+    tools:context="com.example.wwsskkaa.jsketch.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/mainactivity1"
+        android:orientation="vertical"
+
+        />
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:id="@+id/mainactivity2"
+        android:layout_gravity="center_vertical"
+
+        android:orientation="horizontal"
+
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:src="@drawable/blogo1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="110dp"
+        android:layout_gravity="bottom"
+
+        />
+</LinearLayout>
