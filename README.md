@@ -7,6 +7,13 @@ Copyright (c) | 2016 | Shuang Wu | University of Waterloo
 3.IDE: Android Studio Marshmallow 6.0 
 The layout is designed for Nexus 7 Tablet.
 
+This is an anroid sketch app which you can do the following things:
+1)Choose shapes (line, circle, rectangle)
+2)Erase,Clear all, drag and move, select, fill
+3)Choose colors
+4)Choose line width
+5)Undo/Redo
+
 Couple things that need more explanation:
 
 1.Square Canvas:I used a square canvas because it is the best solution to handle changing orientations. I tried to make my app pretty and the right bottom is the logo for my phone app(clicking it doesn’t do anything:))
