@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 public class toolbarview extends LinearLayout implements Observer {
 
     private Model model;
+    private int lighterPurple;
+    private int selectedPurple;
     private ImageButton squareButton,
             ovalButton,
             lineButton,
@@ -60,6 +62,9 @@ public class toolbarview extends LinearLayout implements Observer {
                 return true;
             }
         });
+
+        lighterPurple=Color.parseColor("#cfb2e6");
+        selectedPurple=Color.parseColor("#A479C7");
     }
 
     // the model call this to update the view
@@ -67,98 +72,98 @@ public class toolbarview extends LinearLayout implements Observer {
 
         if(model.getCurrentButton()==Buttons.SQUARE)
         {
-            squareButton.setBackgroundColor(Color.LTGRAY);
-            ovalButton.setBackgroundColor(Color.WHITE);
-            lineButton.setBackgroundColor(Color.WHITE);
-            selectButton.setBackgroundColor(Color.WHITE);
-            eraseButton.setBackgroundColor(Color.WHITE);
-            fillButton.setBackgroundColor(Color.WHITE);
+            squareButton.setBackgroundColor(selectedPurple);
+            ovalButton.setBackgroundColor(lighterPurple);
+            lineButton.setBackgroundColor(lighterPurple);
+            selectButton.setBackgroundColor(lighterPurple);
+            eraseButton.setBackgroundColor(lighterPurple);
+            fillButton.setBackgroundColor(lighterPurple);
 
         }
         else if((model.getCurrentButton()==Buttons.OVAL))
         {
-            ovalButton.setBackgroundColor(Color.LTGRAY);
-            squareButton.setBackgroundColor(Color.WHITE);
-            lineButton.setBackgroundColor(Color.WHITE);
-            selectButton.setBackgroundColor(Color.WHITE);
-            eraseButton.setBackgroundColor(Color.WHITE);
-            fillButton.setBackgroundColor(Color.WHITE);
+            ovalButton.setBackgroundColor(selectedPurple);
+            squareButton.setBackgroundColor(lighterPurple);
+            lineButton.setBackgroundColor(lighterPurple);
+            selectButton.setBackgroundColor(lighterPurple);
+            eraseButton.setBackgroundColor(lighterPurple);
+            fillButton.setBackgroundColor(lighterPurple);
         }
         else if((model.getCurrentButton()==Buttons.LINE))
         {
-            ovalButton.setBackgroundColor(Color.WHITE);
-            squareButton.setBackgroundColor(Color.WHITE);
-            lineButton.setBackgroundColor(Color.LTGRAY);
-            selectButton.setBackgroundColor(Color.WHITE);
-            eraseButton.setBackgroundColor(Color.WHITE);
-            fillButton.setBackgroundColor(Color.WHITE);
+            ovalButton.setBackgroundColor(lighterPurple);
+            squareButton.setBackgroundColor(lighterPurple);
+            lineButton.setBackgroundColor(selectedPurple);
+            selectButton.setBackgroundColor(lighterPurple);
+            eraseButton.setBackgroundColor(lighterPurple);
+            fillButton.setBackgroundColor(lighterPurple);
         }
         else if((model.getCurrentButton()==Buttons.SELECTION))
         {
-            ovalButton.setBackgroundColor(Color.WHITE);
-            squareButton.setBackgroundColor(Color.WHITE);
-            lineButton.setBackgroundColor(Color.WHITE);
-            selectButton.setBackgroundColor(Color.LTGRAY);
-            eraseButton.setBackgroundColor(Color.WHITE);
-            fillButton.setBackgroundColor(Color.WHITE);
+            ovalButton.setBackgroundColor(lighterPurple);
+            squareButton.setBackgroundColor(lighterPurple);
+            lineButton.setBackgroundColor(lighterPurple);
+            selectButton.setBackgroundColor(selectedPurple);
+            eraseButton.setBackgroundColor(lighterPurple);
+            fillButton.setBackgroundColor(lighterPurple);
         }
         else if((model.getCurrentButton()==Buttons.ERASE))
         {
-            ovalButton.setBackgroundColor(Color.WHITE);
-            squareButton.setBackgroundColor(Color.WHITE);
-            lineButton.setBackgroundColor(Color.WHITE);
-            selectButton.setBackgroundColor(Color.WHITE);
-            eraseButton.setBackgroundColor(Color.LTGRAY);
-            fillButton.setBackgroundColor(Color.WHITE);
+            ovalButton.setBackgroundColor(lighterPurple);
+            squareButton.setBackgroundColor(lighterPurple);
+            lineButton.setBackgroundColor(lighterPurple);
+            selectButton.setBackgroundColor(lighterPurple);
+            eraseButton.setBackgroundColor(selectedPurple);
+            fillButton.setBackgroundColor(lighterPurple);
         }
         else if((model.getCurrentButton()==Buttons.FILL))
         {
-            ovalButton.setBackgroundColor(Color.WHITE);
-            squareButton.setBackgroundColor(Color.WHITE);
-            lineButton.setBackgroundColor(Color.WHITE);
-            selectButton.setBackgroundColor(Color.WHITE);
-            eraseButton.setBackgroundColor(Color.WHITE);
-            fillButton.setBackgroundColor(Color.LTGRAY);
+            ovalButton.setBackgroundColor(lighterPurple);
+            squareButton.setBackgroundColor(lighterPurple);
+            lineButton.setBackgroundColor(lighterPurple);
+            selectButton.setBackgroundColor(lighterPurple);
+            eraseButton.setBackgroundColor(lighterPurple);
+            fillButton.setBackgroundColor(selectedPurple);
         }
 
         if(model.getCurrentColor()==2)
         {
-            pinkButton.setBackgroundColor(Color.BLACK);
-            blueButton.setBackgroundColor(Color.WHITE);
-            greenButton.setBackgroundColor(Color.WHITE);
+            pinkButton.setBackgroundColor(selectedPurple);
+            blueButton.setBackgroundColor(lighterPurple);
+            greenButton.setBackgroundColor(lighterPurple);
         }
         else if(model.getCurrentColor()==0)
         {
-            pinkButton.setBackgroundColor(Color.WHITE);
-            blueButton.setBackgroundColor(Color.BLACK);
-            greenButton.setBackgroundColor(Color.WHITE);
+            pinkButton.setBackgroundColor(lighterPurple);
+            blueButton.setBackgroundColor(selectedPurple);
+            greenButton.setBackgroundColor(lighterPurple);
         }
         else if(model.getCurrentColor()==1)
         {
-            pinkButton.setBackgroundColor(Color.WHITE);
-            blueButton.setBackgroundColor(Color.WHITE);
-            greenButton.setBackgroundColor(Color.BLACK);
+            pinkButton.setBackgroundColor(lighterPurple);
+            blueButton.setBackgroundColor(lighterPurple);
+            greenButton.setBackgroundColor(selectedPurple);
         }
 
         if(model.getCurrentThickness()==3)
         {
-            thinButton.setBackgroundColor(Color.LTGRAY);
-            MedButton.setBackgroundColor(Color.WHITE);
-            ThickButton.setBackgroundColor(Color.WHITE);
+            thinButton.setBackgroundColor(selectedPurple);
+            MedButton.setBackgroundColor(lighterPurple);
+            ThickButton.setBackgroundColor(lighterPurple);
         }
         else if(model.getCurrentThickness()==10)
 
         {
-            thinButton.setBackgroundColor(Color.WHITE);
-            MedButton.setBackgroundColor(Color.LTGRAY);
-            ThickButton.setBackgroundColor(Color.WHITE);
+            thinButton.setBackgroundColor(lighterPurple);
+            MedButton.setBackgroundColor(selectedPurple);
+            ThickButton.setBackgroundColor(lighterPurple);
         }
         else if(model.getCurrentThickness()==20)
 
         {
-            thinButton.setBackgroundColor(Color.WHITE);
-            MedButton.setBackgroundColor(Color.WHITE);
-            ThickButton.setBackgroundColor(Color.LTGRAY);
+            thinButton.setBackgroundColor(lighterPurple);
+            MedButton.setBackgroundColor(lighterPurple);
+            ThickButton.setBackgroundColor(selectedPurple);
         }
         // update button text with click count
         // (convert to string, or else Android uses int as resource id!)

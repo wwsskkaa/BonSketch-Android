@@ -1,168 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginTop="15dp"
     android:layout_marginBottom="15dp"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:background="@color/WhiteColor"
-    android:layout_marginLeft="1dp"
+    android:background="@color/Lighter"
+    android:stretchColumns="0,1,2,3"
 
-    >
-
-    <ImageButton
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:id="@+id/Square"
-        android:clickable="true"
-        android:src="@drawable/box"
-        android:background="@color/WhiteColor"
-        android:onClick="SquareOnClick"
-        android:layout_marginRight="5dp"
-        />
+    android:divider="@drawable/lineh"
+    android:showDividers="middle|beginning|end">
 
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/line"
-        android:src="@drawable/diagline"
-        android:background="@color/WhiteColor"
-        android:clickable="true"
-        android:onClick="LineOnClick"
-        android:layout_marginRight="5dp"/>
+        >
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/undo"
+            android:src="@drawable/undo"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="UndoOnClick"
+            android:layout_column="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/oval"
-        android:src="@drawable/circle"
-        android:background="@color/WhiteColor"
-        android:onClick="OvalOnClick"
-        android:layout_marginRight="5dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/redo"
+            android:src="@drawable/redo"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="RedoOnClick"
+            android:layout_column="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/select"
-        android:src="@drawable/cursor"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="SelectOnClick"
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/erase"
-        android:src="@drawable/eraser"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="EraserOnClick"
-        android:layout_marginRight="5dp"
-        android:longClickable="true"
-        />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fill"
-        android:src="@drawable/fill"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="FillOnClick"
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/colorblue"
-        android:src="@drawable/stop"
-        android:clickable="true"
-        android:onClick="BlueOnClick"
-
-        android:background="@color/WhiteColor"
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/colorgreen"
-        android:src="@drawable/stopg"
-        android:clickable="true"
-        android:onClick="GreenOnClick"
-
-        android:background="@color/WhiteColor"
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/colorpink"
-        android:src="@drawable/stopp"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="PinkOnClick"
-
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/thickest"
-        android:src="@drawable/minus"
-        android:clickable="true"
-        android:onClick="ThickestOnClick"
-
-        android:background="@color/WhiteColor"
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/medthin"
-        android:src="@drawable/miline"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="MidThinOnClick"
-
-        android:layout_marginRight="5dp"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/thinnest"
-        android:src="@drawable/stline"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="ThinnestOnClick"
-
-        android:layout_marginRight="5dp"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/undo"
-        android:src="@drawable/undo"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="UndoOnClick"
-        android:layout_marginRight="2dp"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/redo"
-        android:src="@drawable/redo"
-        android:clickable="true"
-        android:background="@color/WhiteColor"
-        android:onClick="RedoOnClick"
-      />
+    </TableRow>
 
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:divider="@drawable/lineh"
+        android:showDividers="middle|end">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/select"
+            android:src="@drawable/cursor"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="SelectOnClick"
+            android:layout_column="0"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thickest"
+            android:src="@drawable/minus"
+            android:clickable="true"
+            android:onClick="ThickestOnClick"
+            android:background="@color/Lighter"
+            android:layout_column="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorblue"
+            android:src="@drawable/stop"
+            android:clickable="true"
+            android:onClick="BlueOnClick"
+            android:background="@color/Lighter"
+            android:layout_column="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Square"
+            android:clickable="true"
+            android:src="@drawable/box"
+            android:background="@color/Lighter"
+            android:onClick="SquareOnClick"
+            android:layout_column="3"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+    </TableRow>
 
 
-</LinearLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:divider="@drawable/lineh"
+        android:showDividers="middle|end">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/erase"
+            android:src="@drawable/eraser"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="EraserOnClick"
+            android:longClickable="true"
+            android:layout_column="0"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/medthin"
+            android:src="@drawable/miline"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="MidThinOnClick"
+            android:layout_column="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorgreen"
+            android:src="@drawable/stopg"
+            android:clickable="true"
+            android:onClick="GreenOnClick"
+            android:background="@color/Lighter"
+            android:layout_column="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/line"
+            android:src="@drawable/diagline"
+            android:background="@color/Lighter"
+            android:clickable="true"
+            android:onClick="LineOnClick"
+            android:layout_column="3"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:divider="@drawable/lineh"
+        android:showDividers="middle|end">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fill"
+            android:src="@drawable/fill"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="FillOnClick"
+            android:layout_column="0"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thinnest"
+            android:src="@drawable/stline"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="ThinnestOnClick"
+            android:layout_column="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorpink"
+            android:src="@drawable/stopp"
+            android:clickable="true"
+            android:background="@color/Lighter"
+            android:onClick="PinkOnClick"
+
+            android:layout_column="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oval"
+            android:src="@drawable/circle"
+            android:background="@color/Lighter"
+            android:onClick="OvalOnClick"
+            android:layout_column="3"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+    </TableRow>
+
+
+</TableLayout>

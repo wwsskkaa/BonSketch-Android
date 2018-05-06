@@ -1,6 +1,8 @@
 package com.example.wwsskkaa.jsketch;
 //// got from prof's mvc example for android studio
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

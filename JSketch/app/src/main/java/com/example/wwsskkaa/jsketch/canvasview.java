@@ -183,8 +183,6 @@ public class canvasview extends LinearLayout implements Observer {
                     break;
                 }
                 case MotionEvent.ACTION_UP: {
-                    //endx = ev.getX();
-                    //endy =  ev.getY();
 
                     if(currentShape!=null&&startx!=-1&&starty!=-1&&endx!=-1&&endy!=-1)
                     {

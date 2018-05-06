@@ -5,37 +5,28 @@
     android:layout_height="fill_parent"
     android:background="@color/Lighter"
     android:orientation="vertical"
-    tools:context="com.example.wwsskkaa.jsketch.MainActivity">
+    tools:context="com.example.wwsskkaa.jsketch.MainActivity"
+    android:weightSum="1">
 
+    <ImageView
+        android:layout_width="310dp"
+        android:layout_height="75dp"
+        android:id="@+id/header"
+        android:src="@drawable/font2"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mainactivity1"
-        android:orientation="horizontal"
-
-        />
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:id="@+id/mainactivity2"
         android:layout_gravity="center_horizontal"
-
         android:orientation="vertical"
-
         />
-
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/logo"
-        android:src="@drawable/blogo1"
-        android:orientation="vertical"
-        android:layout_marginTop="80dp"
-        android:layout_marginRight="10dp"
-        android:layout_gravity="right"
-
-        />
-
+        android:id="@+id/mainactivity1"
+        android:orientation="horizontal"        />
 
 </LinearLayout>

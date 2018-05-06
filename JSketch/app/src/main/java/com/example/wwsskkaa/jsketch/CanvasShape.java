@@ -29,7 +29,7 @@ public class CanvasShape implements Observer{
     private float endYcoordinate;
     private float w;
     private float h;
-    float EPSILON = 20f;
+    float TOLERANCE = 20f;
 
 
 
@@ -63,7 +63,6 @@ public class CanvasShape implements Observer{
         {
             if(endx>=startx)
             {
-               // shape=new Ellipse2D.Double(x0, y0,diameter,diameter);
                 Xcoordinate=x0;
                 Ycoordinate=y0;
                 setEndXcoordinate(-1);
@@ -75,7 +74,6 @@ public class CanvasShape implements Observer{
             {
                 if(endy<=starty)
                 {
-                    //shape=new Ellipse2D.Double(start.getX()-diameter, start.getY()-diameter,diameter,diameter);
                     Xcoordinate=startx-diameter;
                     Ycoordinate=starty-diameter;
                     setEndXcoordinate(-1);
@@ -85,7 +83,6 @@ public class CanvasShape implements Observer{
                 }
                 else
                 {
-                    //shape=new Ellipse2D.Double(start.getX()-diameter, start.getY(),diameter,diameter);
                     Xcoordinate=startx-diameter;
                     Ycoordinate=starty;
                     setEndXcoordinate(-1);
@@ -98,7 +95,6 @@ public class CanvasShape implements Observer{
         }
         else if(button==Buttons.LINE)
         {
-            //shape=new Line2D.Double(start.getX(), start.getY(),end.getX(),end.getY());
             Xcoordinate=startx;
             Ycoordinate=starty;
             setEndXcoordinate(endx);
@@ -110,10 +106,6 @@ public class CanvasShape implements Observer{
     }
 
     public void drawFrame(Canvas canvas,Buttons b) {
-
-
-
-
 
         Paint fgPaintSel = new Paint();
         fgPaintSel.setColor(Color.DKGRAY);
@@ -148,17 +140,14 @@ public class CanvasShape implements Observer{
 
     public boolean lineIntersect(float linePointAx, float linePointAy, float linePointBx,float linePointBy,float pointx,float pointy) {
 
-        if (Math.abs(linePointAx - linePointBx) <= EPSILON) {
+        if (Math.abs(linePointAx - linePointBx) <= TOLERANCE) {
             // We've a vertical line, thus check only the x-value of the point.
-            return (Math.abs(pointx - linePointAx) <= EPSILON&&pointy>=Math.min(linePointAy,linePointBy)&&pointy<=Math.max(linePointAy,linePointBy));
+            return (Math.abs(pointx - linePointAx) <= TOLERANCE &&pointy>=Math.min(linePointAy,linePointBy)&&pointy<=Math.max(linePointAy,linePointBy));
         } else {
-
             float m = (linePointBy - linePointAy) / (linePointBx - linePointAx);
             float b = linePointAy - m * linePointAx;
-            return (Math.abs(pointy - (m * pointx + b)) <= EPSILON)&&pointy>=Math.min(linePointAy,linePointBy)&&pointy<=Math.max(linePointAy,linePointBy)&&(pointx>=Math.min(linePointAx,linePointBx))&&(pointx<=Math.max(linePointAx,linePointBx));
+            return (Math.abs(pointy - (m * pointx + b)) <= TOLERANCE)&&pointy>=Math.min(linePointAy,linePointBy)&&pointy<=Math.max(linePointAy,linePointBy)&&(pointx>=Math.min(linePointAx,linePointBx))&&(pointx<=Math.max(linePointAx,linePointBx));
         }
-
-
     }
 
     public void draw(Canvas canvas) {

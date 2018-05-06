@@ -5,15 +5,20 @@
     android:layout_height="fill_parent"
     android:background="@color/Lighter"
 
+    tools:context="com.example.wwsskkaa.jsketch.MainActivity"
     android:orientation="horizontal"
-    tools:context="com.example.wwsskkaa.jsketch.MainActivity">
+    android:gravity="left|center|center_horizontal">
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:id="@+id/mainactivity1"
-        android:orientation="vertical"
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="310dp"
+        android:id="@+id/header"
+        android:src="@drawable/font3"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
 
         />
     <LinearLayout
@@ -25,15 +30,13 @@
         android:orientation="horizontal"
 
         />
-    <ImageView
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/logo"
-        android:src="@drawable/blogo1"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="110dp"
-        android:layout_gravity="bottom"
+        android:layout_height="fill_parent"
+        android:id="@+id/mainactivity1"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
 
         />
+
 </LinearLayout>
